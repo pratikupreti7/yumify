@@ -1,0 +1,15 @@
+
+img{
+    width: 100%;
+
+}
+.name{
+    font-size: 15px;
+}
+.component{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    justify-content: space-between;
+    cursor: pointer;
+}
