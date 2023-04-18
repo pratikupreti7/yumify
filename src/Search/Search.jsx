@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './styles.css';
 
@@ -9,9 +8,9 @@ const Search = (props) => {
 
   return (
     <div className="search-background relative">
-      <div className="searchbar-wrap h-[60px]">
+      <div className="searchbar-wrap h-[45px]">
         {value ? (
-          <button className="clear-btn w-12 h-12" onClick={clearBtn}>
+          <button className="clear-btn " onClick={clearBtn}>
             &times;
           </button>
         ) : (
@@ -20,7 +19,7 @@ const Search = (props) => {
         <input
           className="search"
           type="text"
-          placeholder="Search your favourite restaurant !!"
+          placeholder="Search your favourite restaurant !"
           value={value}
           onChange={handleChange}
         />

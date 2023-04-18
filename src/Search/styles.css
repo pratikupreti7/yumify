@@ -1,15 +1,15 @@
 .search-background {
     background-image: url('../img/banner.jpeg');
-    background-size:51%;
+    background-size:70%;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 490px;
+    height: 55vh;
   }
   
   .searchbar-wrap {
     position: absolute;
-    bottom: -2%;
-    left: 45%;
+    bottom: 7%;
+    left: 40%;
     transform: translate(-50%, -50%);
     width: 99%;
     max-width: 600px;
@@ -21,29 +21,35 @@
   }
   
   .searchbar {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     margin-right: 10px;
+    margin-top: -1px;
   }
   
   .search {
-    font-size: 24px;
+    font-size: 17px;
     border: none;
     outline: none;
     background-color: transparent;
+    margin-left: 10px;
     width: 500px;
+    margin-top: 4px;
   }
   .clear-btn {
-    /* width: 38px;
-    height: 40px; */
-    font-size: 30px;
+    width: 27px;
+    height: 27px;
+    margin-right: 10px;
+    margin-top: -2px;
+    font-size: 15px;
     font-weight: bold;
     color: #fff;
     background-color: rgb(237, 5, 5);
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    margin-bottom: 5px;
-    padding: 2px;
+    margin-right: 10px;
+    
+
   
   }

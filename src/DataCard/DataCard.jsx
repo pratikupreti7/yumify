@@ -27,7 +27,7 @@ const Data = (props) => {
         </div>
         {/* ETA */}
         <h4 className="text-gray-500 font-medium">{item.deliveryTime} mins</h4>
-        <h4 className="text-gray-500 font-medium">{item?.costForTwoString}</h4>
+        <h4 className="text-gray-500 font-medium">${((item?.costForTwo)/700).toFixed(2)} for 2</h4>
       </div>
       <button className="hover:text-teal-500 text-gray-500 text-2xl py-2 px-4 w-full focus:outline-none">
         ♡
