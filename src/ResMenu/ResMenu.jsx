@@ -8,8 +8,10 @@ import useMenu from '../hooks/useMenu';
 import { addItem,removeItem } from '../helper/cartSlice';
 import { useDispatch } from 'react-redux';
 import noimage from '../img/noimage.jpeg'
+
 const ResMenu = () => {
   const [itemCounts, setItemCounts] = useState({});
+
 
 
   const cartItems=useSelector(store=>store.cart.items)
@@ -28,7 +30,9 @@ const ResMenu = () => {
       }, {})
     : {};
 
-   
+    
+    
+    
     const categoryRef = useRef(null);
   const categories = Object.keys(dishNamesByCategory);
  
@@ -82,7 +86,9 @@ const ResMenu = () => {
               alt=""
             />
             <h2 className="text-white text-xl font-medium">{city}</h2>
+            
           </div>
+         
         </div>
 
   
