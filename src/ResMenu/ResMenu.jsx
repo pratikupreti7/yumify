@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import ShimmerUI from '../ShimmerUI/ShimmerUI';
-import useResturant from '../hooks/useResturantInfo';
+import useResturant from '../hooks/useResturant';
 import useMenu from '../hooks/useMenu';
 import { addItem,removeItem } from '../helper/cartSlice';
 import { useDispatch } from 'react-redux';
-import img from'../img/noimage.jpeg'
+import noimage from '../img/noimage.jpeg'
 const ResMenu = () => {
   const [itemCounts, setItemCounts] = useState({});
 
@@ -88,19 +88,22 @@ const ResMenu = () => {
   
         {/* 2nd div: Menu */}
         <div className="mb-48 w-2/3 flex flex-col items-center justify-center">
-          <div className="flex flex-wrap bg-teal-500 w-full h-full p-4" ref={categoryRef}>
+        <div className="flex flex-wrap bg-teal-500 w-full h-full p-4" ref={categoryRef}>
             {categories.map((category) => (
               <button
                 key={category}
-                className={`text-xs m-2 w-42 h-8 bg-white hover:bg-teal-700 hover:text text-teal-500 py-2 px-4 rounded ${
-                  activeCategory === category && 'bg-teal-700 text-white'
+                className={`text-l m-2 w-42 h-10 bg hover:bg-teal-700 hover:text text-white py-2 px-4 rounded ${
+                  activeCategory === category ? 'bg-teal-700' : 'bg-teal-500'
                 } transition-all duration-200 ease-in-out`}
+
                 onClick={() => activeCategory && handleCategoryClick(category)}
               >
                 {category}
               </button>
             ))}
           </div>
+
+
           <div className="w-4/5">
             {/* Menu Items */}
             {Object.keys(dishNamesByCategory).map((category) => {
@@ -113,7 +116,7 @@ const ResMenu = () => {
                 >
                   <h2 className="text-2xl mb-4">{category}</h2>
                   {dishNamesByCategory[category].map((dish) => {
-                         const url=`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${dish.cloudinaryImageId}`
+                    const url=`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${dish.cloudinaryImageId}`
                          
                     return (
                       <div
@@ -128,7 +131,7 @@ const ResMenu = () => {
                             </div>
                             : <div className='w-36'>
                               
-                            <img src={img} alt="" />
+                              <img src={noimage}  alt={"Empty"}/>
                           </div>}
                         </div>
                         <div className="flex flex-wrap text-l mb-2">{dish.description}</div>
@@ -182,4 +185,3 @@ const ResMenu = () => {
 };
 
 export default ResMenu;
-
